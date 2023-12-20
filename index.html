@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-page">
+
+        <!-- DISPLAY AND SCORES -->
+        <div class="text">
+            <div class="text-rps">
+                <h1>Rock </h1>
+                <h1>Paper </h1>
+                <h1>Scissors</h1>
+            </div>
+            <div class="text-score">
+                <div class="box">
+                    <h2>Computer <br> Score <br> <span id="computer-score">0</span></h2>
+                </div>
+                <div class="box">
+                    <h2>Your <br> Score <br> <span id="player-score">0</span></h2>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- FIRST SECTION OF RPS GAME  -->
+        <div class="hero1" id="hero1">
+            <button class="playerchoice playerchoice1" onclick="playerChoice('rock')"><img src="/assets/img/rock.svg"
+                    class="img-big rock" alt=""><img src="/assets/img/_rock.png" class="img-small" alt=""></button>
+            <img class="line3" src="/assets/img/Line 3.png" alt="">
+            <button class="playerchoice playerchoice2" onclick="playerChoice('paper')"><img src="/assets/img/paper.svg"
+                    class="img-big" alt=""><img src="/assets/img/_paper.png" class="img-small" alt=""></button>
+            <img class="line2" src="/assets/img/Line 2.png" alt="">
+            <button class="playerchoice playerchoice3" onclick="playerChoice('scissors')"><img
+                    src="/assets/img/scissors.svg" class="img-big" alt=""><img src="/assets/img/_scissors.png"
+                    class="img-small img-small-sci" alt=""></button>
+            <img class="line1" src="/assets/img/Line 1.png" alt="">
+        </div>
+
+
+
+        <!-- SECOND SECTION OF RPS GAME -->
+        <div class="hero2" id="hero2">
+            <h1> <span id="player"></span></h1>
+            <h1> <span id="computer"></span></h1>
+            <div class="result-div">
+                <div class="pick1">
+                    <span style="--i:0;"></span>
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <h2>YOU PICKED</h2>
+                    <div class="playerchoice you-pick" id="playerChoiceImg">
+                        <!-- Updated structure to dynamically add content -->
+                        <button class="img-big"></button>
+                        <button class="img-small"></button>
+                    </div>
+                </div>
+                <div class="result-text">
+                    <div id="result" class="resultMessage"></div>
+                    <button class="play-again" onclick="playAgain()">PLAY AGAIN</button>
+                </div>
+                <div class="pick2">
+                    <span style="--i:0;"></span>
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                    <h2>PC PICKED</h2>
+                    <div class="playerchoice computer-pick" id="computerChoiceImg">
+                        <!-- Updated structure to dynamically add content -->
+                        <button class="img-big"></button>
+                        <button class="img-small"></button>
+                    </div>
+                </div>
+            </div>
+            <button class="next"><a href="index1.html">NEXT</a></button>
+        </div>
+
+
+
+        <!-- RULES SECTION -->
+        <div class="head-container">
+            <div class="container" id="myContainer">
+                <div class="text1">
+                    <h1>Game Rules</h1>
+                    <ul>
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                            paper, scissors.”</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                        <li>If both players lay down the same hand, each player lays down another hand</li>
+                    </ul>
+                </div>
+                <div class="toggleX" onclick="toggleContainer()">
+                    <img src="/assets/img/Ellipse 6.png" class="ellipse" alt="">
+                    <img src="/assets/img/X.png" class="x" alt="">
+                </div>
+            </div>
+            <button id="rulesButton" class="rulesButton" onclick="rulesToggle()">RULES</button>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

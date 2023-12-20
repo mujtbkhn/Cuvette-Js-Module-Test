@@ -1,0 +1,63 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+  body{
+    height: 100vh;
+  }
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #8cc461;
+}
+
+.game-won {
+    text-align: center;
+    color: white;
+}
+
+.game-won img {
+    display: block; /* Make the images a block element */
+    margin: 0 auto; /* Center the images */
+}
+
+.game-won h1 {
+    font-size: 5.5em; /* Adjust the font size */
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+.game-won h2 {
+    font-size: 2.5em; /* Adjust the font size */
+    font-family: Roboto;
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+.play-again {
+    background-color: white;
+    color: black;
+    padding: 15px 45px;
+    border-radius: 10px;
+    border-style: none;
+    text-decoration: none;
+    list-style: none;
+    /* position: absolute; */
+    top: 50px;
+
+}
+.play-again a{
+    text-decoration: none;
+}
+.stars{
+    position: relative;
+}
+.trophy{
+    position: absolute;
+    top: 80px;
+    right: 150px;
+}

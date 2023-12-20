@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 500;
+}
+h2 {
+  color: black;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* If you want to hide the default list item marker, you can set list-style-type to none */
+ul li {
+  list-style-type: none;
+  margin-left: 0px; 
+  margin-bottom: 10px;
+}
+
+/* Add styling for the box image */
+ul li::before {
+  content: url('/assets/img/yellow-box.png'); /* Adjust the image path as needed */
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+/* DISPLAY AND SCORES */
+
+.main-page {
+  height: 100%;
+  background-color: #8cc461;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#computer-score,
+#player-score {
+  color: black;
+  font-size: 2em;
+}
+
+.text {
+  display: flex;
+  border: 2px solid white;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 20px;
+  margin: 0px 20rem;
+}
+.text-rps {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 30px;
+  color: white;
+}
+.text-rps h1 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 3.5em;
+}
+.text-score {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin: auto 0;
+}
+
+.box {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+/* FIRST SECTION OF RPS GAME */
+
+.hero1 img {
+  /* background-color: #8cc461;
+  border: none;
+  outline: none; */
+}
+.playerchoice {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.playerchoice1 {
+  position: absolute;
+  top: 7.7rem;
+  right: 58.5rem;
+  background: none;
+  border: none;
+  z-index: 1;
+}
+.playerchoice2 {
+  position: absolute;
+  top: 20rem;
+  right: 50rem;
+  background: none;
+  border: none;
+  z-index: 1;
+}
+.playerchoice3 {
+  position: absolute;
+  top: 8rem;
+  right: 41.5rem;
+  background: none;
+  border: none;
+  z-index: 1;
+}
+
+.rps-white {
+  background-color: white;
+}
+.img-big {
+  position: relative;
+}
+.img-small {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+  /* background-color: white; */
+}
+
+.line3 {
+  position: absolute;
+  top: 16rem;
+  right: 57.5rem;
+}
+
+.line2 {
+  position: absolute;
+  top: 16rem;
+  right: 48.2rem;
+}
+
+.line1 {
+  position: absolute;
+  top: 12rem;
+  right: 50.8rem;
+}
+
+/* SECOND SECTION OF RPS GAME */
+#hero2 {
+  display: none; /* initially hide hero2 */
+}
+.result-div {
+  display: flex;
+  position: absolute;
+  top: 8rem;
+  left: 20rem;
+}
+.pick1 h2,
+.pick2 h2 {
+  z-index: 10000000;
+  color: white;
+}
+.you-pick,
+.computer-pick {
+  position: relative;
+  z-index: 1000;
+}
+
+.result-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3rem;
+  width: 500px;
+}
+.result-text h1 {
+  text-align: center;
+  padding-bottom: 15px;
+  color: white;
+}
+.main-result-text{
+  font-weight: 600; 
+  font-size: 3rem; 
+  letter-spacing: 2px;
+}
+.comain-result-text{
+  font-size: 1.5rem; 
+  margin: 20px 0;
+}
+.play-again {
+  background-color: white;
+  color: black;
+  padding: 15px 45px;
+  border-radius: 10px;
+  border-style: none;
+  text-decoration: none;
+  list-style: none;
+  max-width: 200px;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.play-again a {
+  text-decoration: none;
+}
+.next {
+  position: absolute;
+  top: 28rem;
+  right: 20rem;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  letter-spacing: 5px;
+}
+.next a {
+  text-decoration: none;
+  color: white;
+}
+
+/* RULES SECTION */
+
+.head-container {
+  position: fixed;
+  top: 21rem;
+  right: 6rem;
+  z-index: 1000; 
+}
+.container {
+  width: 235px;
+  height: 310px;
+  border: 7px solid white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #004429;
+  color: white;
+  position: fixed;
+  right: 50px;
+  z-index: 1000; 
+  display: none;
+}
+.text1 ul li {
+  font-size: 0.925rem;
+  margin-top: 4px;
+}
+.text1 h1 {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.toggleX {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+.ellipse {
+  position: relative;
+}
+.x {
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  cursor: pointer;
+}
+.rulesButton {
+  position: fixed;
+  bottom: 70px;
+  right: 60px;
+  font-size: 1.3em;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  list-style: none;
+  z-index: 1001;
+  cursor: pointer;
+  letter-spacing: 5px;
+}
+.rulesButton.hidden {
+  display: block;
+}
+
+/* PULSE ANIMATION */
+
+.pulse {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #289a27;
+  border-radius: 50%;
+  top: 10px;
+  left: -18px;
+}
+.pulse .img-big{
+  top: -10px;
+  left: 10px;
+}
+.pulse .img-small{
+  left: 90px;
+  top: 70px;
+}
+
+.pulse span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  opacity: 0.8;
+  animation: pulseAnimate 2s ease-out infinite;
+  animation-delay: calc(0.5s * var(--i));
+  
+}
+
+@keyframes pulseAnimate {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
