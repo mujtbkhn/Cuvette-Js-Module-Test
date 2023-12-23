@@ -4,6 +4,7 @@ const playerScore = document.getElementById('player-score');
 const resultDiv = document.getElementById('result');
 const playerDisplay = document.getElementById('player')
 const computerDisplay = document.getElementById('computer')
+const nextButton = document.querySelector('.next')
 
 //LOCAL STORAGE CODE FOR DATA STORING
 const storedData = JSON.parse(localStorage.getItem('data')) || { playerScore: 0, computerScore: 0 }
@@ -74,11 +75,13 @@ function displayResult(player, computer, score) {
         resultMessage = '<span class="main-result-text">YOU WIN</span> <br> <span class="comain-result-text">AGAINST PC</span>';
         pick1.classList.add('pulse');
         pick2.classList.remove('pulse'); //toggle animation for the winning class
+        nextButton.classList.remove('hidden')
         ;
     } else {
         resultMessage = '<span class="main-result-text" style="font-weight: 600; font-size: 3rem; letter-spacing: 2px;">YOU LOST</span> <br>  <span style=" font-size: 1 rem; margin: 20px 0;">AGAINST PC</span>';
         pick2.classList.add('pulse');
         pick1.classList.remove('pulse');
+        nextButton.classList.add('hidden')
     }
 
     playerScore.textContent = totalScore.playerScore;
