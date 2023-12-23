@@ -71,6 +71,7 @@ function displayResult(player, computer, score) {
         resultMessage = 'TIE UP';
         pick1.classList.remove('pulse');
         pick2.classList.remove('pulse');//removing the pulse animation when score is 0
+        nextButton.classList.add('hidden')
     } else if (score === 1) {
         resultMessage = '<span class="main-result-text">YOU WIN</span> <br> <span class="comain-result-text">AGAINST PC</span>';
         pick1.classList.add('pulse');
